@@ -1,0 +1,16 @@
+version: "3"
+services:
+  directus:
+    image: directus/directus:10.8.2
+    ports:
+      - 8055:8055
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+    environment:
+      KEY: "qYL4issHJ37IOIZqGQ3hVykvCBkY3U61en6g"
+      SECRET: "z532jGGP6MvM8DBerElsIwj93ZNq59MCuc4r"
+      ADMIN_EMAIL: "admin@local.com"
+      ADMIN_PASSWORD: "admin"
+      DB_CLIENT: "sqlite3"
+      DB_FILENAME: "/directus/database/data.db"
